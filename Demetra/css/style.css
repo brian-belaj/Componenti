@@ -21,6 +21,7 @@ h3 {
 }
 .btn {
   font-weight: 700 !important;
+  padding: 15px 30px!important;
 }
 h6 {
   font-family: Manrope;
@@ -157,6 +158,78 @@ h6 {
   animation-delay: 0s; /* Resetta il ritardo */
 }
 
+/*Cerchietti*/
+@property --percentage {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+.counter {
+  animation: counter 1s ease-out;
+  animation-fill-mode: forwards;
+  counter-reset: num var(--percentage);
+}
+.counter::before {
+  content: counter(num) "%";
+}
+
+@keyframes counter {
+  from {
+    --percentage: 0;
+  }
+  to {
+    --percentage: var(--counter-end);
+  }
+}
+
+.percentage-chart {
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+.percentage-chart-bg {
+  fill: none;
+  stroke: #E3E9EB;
+  stroke-width: 4;
+}
+
+.percentage-chart-stroke {
+  fill: none;
+  stroke-width: 4;
+  stroke: #DF9491;
+  stroke-linecap: round;
+  animation: progress 5s ease-out forwards;
+}
+
+.counter {
+  position: relative;
+  top: 20%;
+  text-align: center;
+  font-size: 40px;
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+.time-breakdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.time-breakdown-chart {
+  display: flex;
+}
+.counter p{
+  font-family: 'Manrope', sans-serif;
+  font-size: 20px;
+}
+/* fine cerchietti*/
+
 @media (max-width: 560px) {
   .swiper-slide .card {
     width: 300px;
@@ -175,6 +248,13 @@ h6 {
     font-family: inherit;
     font-size: 14px;
   }
+  .counter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate3d(-50%, -50%, 0);
+}
 }
 @media (min-width: 560px) and (max-width: 767.98px) {
   .swiper-slide .card {
@@ -213,6 +293,16 @@ h6 {
     font-family: inherit;
     font-size: 14px;
   }
+  .single-chart-1::after,
+  .single-chart-2::after{
+    content: '';
+    position: absolute;
+    height: 69%;
+    top: 50%;
+    margin-left: 33%; 
+    width: 1px;
+    background-color: #AFC3CE;
+}
 }
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .swiper-slide .card {
@@ -240,6 +330,17 @@ h6 {
     font-family: inherit;
     font-size: 14px;
   }
+  .single-chart-1::after,
+  .single-chart-2::after{
+    content: '';
+    position: absolute;
+    height: 69%;
+    top: 50%;
+     margin-left: 33%; 
+    width: 1px;
+    background-color: #AFC3CE;
+}
+
 }
 @media (min-width: 1200px) and (max-width: 1399.98px) {
   .swiper-slide .card {
@@ -267,6 +368,17 @@ h6 {
     font-family: inherit;
     font-size: 14px;
   }
+  .single-chart-1::after,
+  .single-chart-2::after{
+    content: '';
+    position: absolute;
+    height: 69%;
+    top: 50%;
+     margin-left: 33%; 
+    width: 1px;
+    background-color: #AFC3CE;
+}
+
 }
 @media screen and (min-width: 1400px) {
   .swiper-slide .card {
@@ -295,4 +407,15 @@ h6 {
     font-family: inherit;
     font-size: 14px;
   }
+
+  .single-chart-1::after,
+  .single-chart-2::after{
+    content: '';
+    position: absolute;
+    height: 69%;
+    top: 50%;
+     margin-left: 33%; 
+    width: 1px;
+    background-color: #AFC3CE;
+}
 }
