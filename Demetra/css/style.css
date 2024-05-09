@@ -168,6 +168,13 @@ h6 {
   .swiper-button-next {
     display: none;
   }
+  .swiper-pagination.why{
+    position: static;
+    display: flex;
+    color: #fff;
+    font-family: inherit;
+    font-size: 14px;
+  }
 }
 @media (min-width: 560px) and (max-width: 767.98px) {
   .swiper-slide .card {
@@ -180,6 +187,13 @@ h6 {
   .swiper-button-next {
     display: none;
   }
+  .swiper-pagination.why{
+    position: static;
+    display: flex;
+    color: #fff;
+    font-family: inherit;
+    font-size: 14px;
+  }
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
   .swiper-slide .card {
@@ -191,6 +205,13 @@ h6 {
   .swiper-button-prev,
   .swiper-button-next {
     display: none;
+  }
+  .swiper-pagination.why{
+    position: static;
+    display: flex;
+    color: #fff;
+    font-family: inherit;
+    font-size: 14px;
   }
 }
 @media (min-width: 992px) and (max-width: 1199.98px) {
@@ -212,6 +233,13 @@ h6 {
   .row{
     min-height: 600px;
   }
+  .swiper-pagination.why{
+    position: static;
+    display: flex;
+    color: #fff;
+    font-family: inherit;
+    font-size: 14px;
+  }
 }
 @media (min-width: 1200px) and (max-width: 1399.98px) {
   .swiper-slide .card {
@@ -231,6 +259,13 @@ h6 {
   }
   .row{
     min-height: 600px;
+  }
+  .swiper-pagination.why{
+    position: static;
+    display: flex;
+    color: #fff;
+    font-family: inherit;
+    font-size: 14px;
   }
 }
 @media screen and (min-width: 1400px) {
@@ -252,5 +287,12 @@ h6 {
   }
   .row{
     min-height: 600px;
+  }
+  .swiper-pagination.why{
+    position: static;
+    display: flex;
+    color: #fff;
+    font-family: inherit;
+    font-size: 14px;
   }
 }

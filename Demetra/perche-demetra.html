@@ -25,34 +25,63 @@
   <body>
     <section class="h-100 slider-why-row">
       <div class="container-fluid">
-        <div class="row py-5 d-flex align-items-center" style="background-image: url(/img/brooke-cagle--uHVRvDr7pg-unsplash.jpg); background-size: cover;">
-            <div class="overlay"></div>
-            <div class="col-md-6 col-12 mx-md-5 mx-1 z-1">
-    <h3 class="text-light z-1">Perché scegliere Demetra</h3>
+        <div
+          class="row py-5 d-flex align-items-center"
+          style="
+            background-image: url(/img/brooke-cagle--uHVRvDr7pg-unsplash.jpg);
+            background-size: cover;
+          "
+        >
+          <div class="overlay"></div>
+          <div class="col-lg-6 col-md-8 col-12 mx-md-5 mx-1 z-1">
+            <h3 class="text-light z-1">Perché scegliere Demetra</h3>
             <!-- Swiper -->
             <div class="swiper-container why">
               <div class="swiper-wrapper">
                 <div class="swiper-slide rounded-2 why my-4">
-                  <div class="rounded-2 d-flex bg-white justify-content-start flex-column px-3 py-5 w-100 text-start">
+                  <div
+                    class="rounded-2 d-flex bg-white justify-content-start flex-column px-3 py-5 w-100 text-start"
+                  >
                     <h4 class="py-3">Assistenza completa</h4>
-                    <p>Siamo professionisti che hanno scelto di dedicarsi al tema dell’infertilità e della medicina della riproduzione. Ti sosteniamo non solo dal punto di vista medico ma anche sotto quello psicologico e relazionale.</p>
+                    <p>
+                      Siamo professionisti che hanno scelto di dedicarsi al tema
+                      dell’infertilità e della medicina della riproduzione. Ti
+                      sosteniamo non solo dal punto di vista medico ma anche
+                      sotto quello psicologico e relazionale.
+                    </p>
                   </div>
                 </div>
                 <div class="swiper-slide rounded-2 why my-4">
-                    <div class="rounded-2 d-flex bg-white justify-content-start flex-column px-3 py-5 w-100 text-start">
-                        <h4 class="py-3">Assistenza completa</h4>
-                        <p>Siamo professionisti che hanno scelto di dedicarsi al tema dell’infertilità e della medicina della riproduzione. Ti sosteniamo non solo dal punto di vista medico ma anche sotto quello psicologico e relazionale.</p>
-                      </div>
+                  <div
+                    class="rounded-2 d-flex bg-white justify-content-start flex-column px-3 py-5 w-100 text-start"
+                  >
+                    <h4 class="py-3">Assistenza completa</h4>
+                    <p>
+                      Siamo professionisti che hanno scelto di dedicarsi al tema
+                      dell’infertilità e della medicina della riproduzione. Ti
+                      sosteniamo non solo dal punto di vista medico ma anche
+                      sotto quello psicologico e relazionale.
+                    </p>
+                  </div>
                 </div>
                 <div class="swiper-slide rounded-2 why my-4">
-                    <div class="rounded-2 d-flex bg-white justify-content-start flex-column px-3 py-5 w-100 text-start">
-                        <h4 class="py-3">Assistenza completa</h4>
-                        <p>Siamo professionisti che hanno scelto di dedicarsi al tema dell’infertilità e della medicina della riproduzione. Ti sosteniamo non solo dal punto di vista medico ma anche sotto quello psicologico e relazionale.</p>
-                      </div>
+                  <div
+                    class="rounded-2 d-flex bg-white justify-content-start flex-column px-3 py-5 w-100 text-start"
+                  >
+                    <h4 class="py-3">Assistenza completa</h4>
+                    <p>
+                      Siamo professionisti che hanno scelto di dedicarsi al tema
+                      dell’infertilità e della medicina della riproduzione. Ti
+                      sosteniamo non solo dal punto di vista medico ma anche
+                      sotto quello psicologico e relazionale.
+                    </p>
+                  </div>
                 </div>
               </div>
+              
               <!-- Add Scrollbar -->
               <div class="swiper-scrollbar"></div>
+              <div class="swiper-pagination why py-2"></div>
               <div class="swiper-button-next why"></div>
               <div class="swiper-button-prev why"></div>
             </div>
@@ -67,7 +96,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
       var swiper = new Swiper(".swiper-container", {
-        slidesPerView: 'auto',
+        slidesPerView: "auto",
         scrollbar: {
           el: ".swiper-scrollbar",
           hide: false,
@@ -75,6 +104,7 @@
         },
         pagination: {
           el: ".swiper-pagination",
+          type: "fraction",
           clickable: true,
         },
         navigation: {
