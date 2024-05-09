@@ -21,7 +21,7 @@ h3 {
 }
 .btn {
   font-weight: 700 !important;
-  padding: 15px 30px!important;
+  padding: 15px 30px !important;
 }
 h6 {
   font-family: Manrope;
@@ -56,7 +56,8 @@ h6 {
 .swiper-rtl .swiper-button-next:after {
   content: url(/img/arrow-prev.svg);
 }
-.swiper-button-next.why:after, .swiper-rtl .swiper-button-prev.why:after{
+.swiper-button-next.why:after,
+.swiper-rtl .swiper-button-prev.why:after {
   content: url(/img/arrow-next-white.svg);
 }
 .swiper-button-prev.why:after,
@@ -188,18 +189,21 @@ h6 {
   height: 200px;
   position: relative;
 }
+.percentage-chart svg{
+  max-width: 200px;
+}
 .percentage-chart-bg {
   fill: none;
-  stroke: #E3E9EB;
+  stroke: #e3e9eb;
   stroke-width: 4;
 }
 
 .percentage-chart-stroke {
   fill: none;
   stroke-width: 4;
-  stroke: #DF9491;
+  stroke: #df9491;
   stroke-linecap: round;
-  animation: progress 5s ease-out forwards;
+  animation: progress 1.5s ease-out forwards;
 }
 
 .counter {
@@ -224,8 +228,8 @@ h6 {
 .time-breakdown-chart {
   display: flex;
 }
-.counter p{
-  font-family: 'Manrope', sans-serif;
+.counter p {
+  font-family: "Manrope", sans-serif;
   font-size: 20px;
 }
 /* fine cerchietti*/
@@ -241,7 +245,7 @@ h6 {
   .swiper-button-next {
     display: none;
   }
-  .swiper-pagination.why{
+  .swiper-pagination.why {
     position: static;
     display: flex;
     color: #fff;
@@ -254,7 +258,7 @@ h6 {
     left: 50%;
 
     transform: translate3d(-50%, -50%, 0);
-}
+  }
 }
 @media (min-width: 560px) and (max-width: 767.98px) {
   .swiper-slide .card {
@@ -267,7 +271,7 @@ h6 {
   .swiper-button-next {
     display: none;
   }
-  .swiper-pagination.why{
+  .swiper-pagination.why {
     position: static;
     display: flex;
     color: #fff;
@@ -286,7 +290,7 @@ h6 {
   .swiper-button-next {
     display: none;
   }
-  .swiper-pagination.why{
+  .swiper-pagination.why {
     position: static;
     display: flex;
     color: #fff;
@@ -294,15 +298,15 @@ h6 {
     font-size: 14px;
   }
   .single-chart-1::after,
-  .single-chart-2::after{
-    content: '';
+  .single-chart-2::after {
+    content: "";
     position: absolute;
     height: 69%;
     top: 50%;
-    margin-left: 33%; 
+    margin-left: 33%;
     width: 1px;
-    background-color: #AFC3CE;
-}
+    background-color: #afc3ce;
+  }
 }
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .swiper-slide .card {
@@ -320,10 +324,10 @@ h6 {
   .swiper-button-next.why {
     right: 50%;
   }
-  .row{
+  .row {
     min-height: 600px;
   }
-  .swiper-pagination.why{
+  .swiper-pagination.why {
     position: static;
     display: flex;
     color: #fff;
@@ -331,16 +335,15 @@ h6 {
     font-size: 14px;
   }
   .single-chart-1::after,
-  .single-chart-2::after{
-    content: '';
+  .single-chart-2::after {
+    content: "";
     position: absolute;
     height: 69%;
     top: 50%;
-     margin-left: 33%; 
+    margin-left: 33%;
     width: 1px;
-    background-color: #AFC3CE;
-}
-
+    background-color: #afc3ce;
+  }
 }
 @media (min-width: 1200px) and (max-width: 1399.98px) {
   .swiper-slide .card {
@@ -358,10 +361,10 @@ h6 {
   .swiper-button-next.why {
     right: 50%;
   }
-  .row{
+  .row {
     min-height: 600px;
   }
-  .swiper-pagination.why{
+  .swiper-pagination.why {
     position: static;
     display: flex;
     color: #fff;
@@ -369,16 +372,15 @@ h6 {
     font-size: 14px;
   }
   .single-chart-1::after,
-  .single-chart-2::after{
-    content: '';
+  .single-chart-2::after {
+    content: "";
     position: absolute;
     height: 69%;
     top: 50%;
-     margin-left: 33%; 
+    margin-left: 33%;
     width: 1px;
-    background-color: #AFC3CE;
-}
-
+    background-color: #afc3ce;
+  }
 }
 @media screen and (min-width: 1400px) {
   .swiper-slide .card {
@@ -397,10 +399,10 @@ h6 {
     position: absolute;
     top: 90%;
   }
-  .row{
+  .row {
     min-height: 600px;
   }
-  .swiper-pagination.why{
+  .swiper-pagination.why {
     position: static;
     display: flex;
     color: #fff;
@@ -409,13 +411,13 @@ h6 {
   }
 
   .single-chart-1::after,
-  .single-chart-2::after{
-    content: '';
+  .single-chart-2::after {
+    content: "";
     position: absolute;
     height: 69%;
     top: 50%;
-     margin-left: 33%; 
+    margin-left: 33%;
     width: 1px;
-    background-color: #AFC3CE;
-}
+    background-color: #afc3ce;
+  }
 }
