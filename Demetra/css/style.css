@@ -2,6 +2,11 @@ html,
 body {
   position: relative;
 }
+:root{
+  --primary-pink : #df9491;
+  --btn-pink: #ffb7ae;
+  --grey-light: rgb(227, 233, 235);
+}
 
 body {
   background: #eee;
@@ -132,9 +137,9 @@ h6 {
 }
 .btn-primary {
   padding: 10x 30px !important;
-  background-color: #ffb7ae !important;
+  background-color: var(--btn-pink) !important;
   box-shadow: 2px 4px 6px 0px rgba(89, 41, 30 0.1);
-  border-color: #ffb7ae !important;
+  border-color: var(--btn-pink) !important;
 }
 .btn-tertiary {
   color: #fff !important;
@@ -183,7 +188,6 @@ h6 {
     --percentage: var(--counter-end);
   }
 }
-
 .percentage-chart {
   width: 200px;
   height: 200px;
@@ -194,14 +198,14 @@ h6 {
 }
 .percentage-chart-bg {
   fill: none;
-  stroke: #e3e9eb;
+  stroke: var(--grey-light);
   stroke-width: 4;
 }
 
 .percentage-chart-stroke {
   fill: none;
   stroke-width: 4;
-  stroke: #df9491;
+  stroke: var(--primary-pink);
   stroke-linecap: round;
   animation: progress 1.5s ease-out forwards;
 }
@@ -232,8 +236,23 @@ h6 {
   font-family: "Manrope", sans-serif;
   font-size: 20px;
 }
-/* fine cerchietti*/
+/* End Circle*/
 
+/*Tabs*/
+.nav-link.active{
+  background-color: var(--btn-pink)!important;
+}
+.nav-link{
+  color: #000!important;
+}
+.nav-link.btn{
+  padding: 12px 42px!important;
+}
+.nav-tabs{
+  background-color: var(--grey-light);
+}
+
+/*End Tabs*/
 @media (max-width: 560px) {
   .swiper-slide .card {
     width: 300px;
