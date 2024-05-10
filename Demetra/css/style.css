@@ -2,8 +2,8 @@ html,
 body {
   position: relative;
 }
-:root{
-  --primary-pink : #df9491;
+:root {
+  --primary-pink: #df9491;
   --btn-pink: #ffb7ae;
   --grey-light: rgb(227, 233, 235);
 }
@@ -193,7 +193,7 @@ h6 {
   height: 200px;
   position: relative;
 }
-.percentage-chart svg{
+.percentage-chart svg {
   max-width: 200px;
 }
 .percentage-chart-bg {
@@ -238,7 +238,7 @@ h6 {
 }
 /* End Circle*/
 
-/*Tabs*/
+/*Tabs
 .nav-link.active{
   background-color: var(--btn-pink)!important;
 }
@@ -252,8 +252,81 @@ h6 {
   background-color: var(--grey-light);
 }
 
-/*End Tabs*/
+End Tabs*/
 @media (max-width: 560px) {
+  /*Header*/
+
+  .navbar-collapse {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    width: 100%;
+    height: 100%;
+    background-color: #fefeff;
+  }
+
+  .navbar-collapse.collapsing {
+    left: -100%;
+    transition: height 0s ease;
+  }
+  .navbar-collapse.show {
+    left: 0;
+    transition: left 300ms ease-in-out;
+  }
+
+  .navbar-toggler.collapsed ~ .navbar-collapse {
+    transition: left 500ms ease-in-out;
+  }
+
+  .navbar-toggler {
+    position: relative;
+    transition: 0.5s ease-in-out;
+  }
+  .toggler-container {
+    border: 1px solid var(--btn-pink);
+    width: 40px;
+    height: 40px;
+    position: relative;
+  }
+  .navbar-toggler,
+  .navbar-toggler:focus,
+  .navbar-toggler:active,
+  .navbar-toggler-icon:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border: 0 !important;
+  }
+  .navbar-toggler span {
+    margin: 0;
+    padding: 0;
+  }
+  .navbar-toggler-icon {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+  }
+  .toggler-icon {
+    display: block;
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: #592923;
+    border-radius: 1px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
+  }
+  .close-icon {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
+  /*End Header*/
   .swiper-slide .card {
     width: 300px;
     height: 300px;
@@ -280,6 +353,64 @@ h6 {
   }
 }
 @media (min-width: 560px) and (max-width: 767.98px) {
+  /*Header*/
+
+  .navbar-collapse {
+    position: fixed;
+    top: 50px; /* adjust to height of navbar */
+    left: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    width: 75%;
+    height: 100%;
+  }
+
+  .navbar-collapse.collapsing {
+    left: -75%;
+    transition: height 0s ease;
+  }
+
+  .navbar-collapse.show {
+    left: 0;
+    transition: left 300ms ease-in-out;
+  }
+
+  .navbar-toggler.collapsed ~ .navbar-collapse {
+    transition: left 500ms ease-in-out;
+  }
+  .navbar-toggle {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    transition: 0.5s ease-in-out;
+  }
+  .navbar-toggler,
+  .navbar-toggler:focus,
+  .navbar-toggler:active,
+  .navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+    border: 0;
+  }
+  .navbar-toggler span {
+    margin: 0;
+    padding: 0;
+  }
+  .toggler-icon {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: #222222;
+    border-radius: 1px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
+  }
+  /*End Header*/
+
   .swiper-slide .card {
     width: 300px;
     height: 300px;
@@ -402,6 +533,10 @@ h6 {
   }
 }
 @media screen and (min-width: 1400px) {
+  /*Header*/
+
+  /*End Header*/
+
   .swiper-slide .card {
     width: 300px;
     height: 300px;
