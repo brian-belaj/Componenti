@@ -9,8 +9,6 @@ body {
 }
 
 body {
-  background: #eee;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #000;
   margin: 0;
@@ -55,11 +53,11 @@ h6 {
 }
 .swiper-button-next:after,
 .swiper-rtl .swiper-button-prev:after {
-  content: url(/img/next-arrow.svg);
+  content: url(/wp-content/uploads/2024/05/next-arrow.svg);
 }
 .swiper-button-prev:after,
 .swiper-rtl .swiper-button-next:after {
-  content: url(/img/arrow-prev.svg);
+  content: url(/wp-content/uploads/2024/05/arrow-prev.svg);
 }
 .swiper-button-next.why:after,
 .swiper-rtl .swiper-button-prev.why:after {
