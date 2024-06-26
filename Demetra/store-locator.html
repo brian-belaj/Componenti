@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Custom Store Locator</title>
+    <style>
+        /* Imposta la larghezza e l'altezza della mappa */
+        #map {
+            height: 100%;
+            width: 70%;
+            float: left;
+        }
+        /* Imposta la larghezza e l'altezza della lista degli store */
+        #store-list {
+            height: 100%;
+            width: 30%;
+            float: left;
+            overflow-y: scroll;
+            background-color: #f7f7f7;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        /* Imposta l'altezza del contenitore della mappa e della lista */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: inherit;
+        }
+        /* Stile per gli elementi della lista degli store */
+        .store-item {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDT2HFzh9FP8wKwfOXz1Hm-JqGFGkY7kP8&libraries=places%2Cgeometry&region=IT&language=it&callback=vueGoogleMapsInit"></script>
+    <script>
+        // Dati degli store
+        const stores = [
+            {
+                name: "Demetra Firenze",
+                description: "This is the description for Store 1.",
+                directions: "https://www.google.com/maps/dir/43.7088054,10.3834796/demetra+firenze/@43.7719249,10.133094,9z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x132a5687acc06843:0xfa7120051821bac7!2m2!1d11.2435766!2d43.8046484?entry=ttu",
+                book: "#",
+                lat: 43.805221382546826,
+                lng: 11.24389846505903
+            },
+            {
+                name: "Store 2",
+                description: "This is the description for Store 2.",
+                book: "#",
+                directions: "",
+                lat: 34.0522,
+                lng: -118.2437  
+            },
+            {
+                name: "Store 3",
+                description: "This is the description for Store 3.",
+                book: "#",
+                directions: "",
+                lat: 40.7128,
+                lng: -74.0060
+            }
+        ];
+
+        // Funzione di inizializzazione della mappa
+        function initMap() {
+            const map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: 43.805221382546826, lng: 11.243941380400232},
+                zoom: 7,
+                styles: [
+                    {
+                        featureType: 'landscape',
+                        stylers: [
+                            { color: '#e5e9eb' }
+                        ]
+                    },
+                    {
+                        featureType: 'water',
+                        stylers: [
+                            { color: '' }
+                        ]
+                    },
+                    {
+                        featureType: 'road',
+                        stylers: [
+                            {color: '#df9491'}
+                        ]
+                    }
+                ]
+            });
+
+            // Aggiungi marker per ogni store e popola la lista degli store
+            const storeList = document.getElementById('store-list');
+            stores.forEach(store => {
+                const marker = new google.maps.Marker({
+                    position: {lat: store.lat, lng: store.lng},
+                    map: map,
+                    title: store.name
+                });
+
+                const storeItem = document.createElement('div');
+                storeItem.className = 'store-item';
+
+                const storeName = document.createElement('h3');
+                storeName.textContent = store.name;
+                storeItem.appendChild(storeName);
+
+                const storeDescription = document.createElement('p');
+                storeDescription.className = 'store-description';
+                storeDescription.textContent = store.description;
+                storeItem.appendChild(storeDescription);
+
+                const storeDirection = document.createElement('div');
+                storeDirection.className = 'store-direction d-flex';
+                storeDirection.innerHTML = '<a class="btn btn-primary" href="' + store.directions + '" target="_blank" >Ottieni indicazioni</a><a class="btn btn-secondary" href="'+ store.book +'" target="_blank">Prenota</a>';
+                storeItem.appendChild(storeDirection);
+
+                storeList.appendChild(storeItem);
+
+                storeItem.addEventListener('click', () => {
+                    map.setCenter(marker.getPosition());
+                    map.setZoom(12);
+                });
+            });
+        }
+
+        window.onload = initMap;
+    </script>
+</head>
+<body>
+    <div id="map"></div>
+    <div id="store-list">
+        <h3>Le nostre sedi</h3>
+    </div>
+</body>
+</html>
