@@ -1,14 +1,67 @@
-.price-table, .price-table td{
-    background-color: #F1F4F5;
-    border-radius: 6px;
+.prices.grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
+.price-table-container{
+    background-color: #F1F4F5;
+}
+.prices li{
+    border-bottom: 1px solid #AFC3CE;
+    display: flex;
+    justify-content: space-between;
+}
+@media screen and (max-width:576px){
+    .prices.grid{
+        grid-template-columns: 1fr;
+    }
+    .price-table-container {
+        padding: 48px 16px;
+    }
 
-
-@media screen and (min-width: 1400px) {
-    .price-table{
-        padding-left: 158px;
-        padding-right: 158px;
-        padding-top: 50px;
-        padding-bottom: 70px;
+}
+@media screend and (min-width:576px) and (max-width:768px){
+    .prices.grid{
+        column-gap: 20px;
+        row-gap: 20px;
+    }
+    .price-table-container {
+        padding: 48px 32px;
+    }
+}
+@media screen and (min-width:768px) and (max-width:992px){
+    .prices.grid{
+        column-gap: 20px;
+        row-gap: 20px;
+    }
+    .price-table-container {
+        padding: 48px 64px;
+    }
+}
+@media screen and (min-width:992px) and (max-width:1200px){
+    .prices.grid{
+        column-gap: 20px;
+        row-gap: 20px;
+    }
+    .price-table-container {
+        padding: 48px 80px;
+    }
+}
+@media screen and (min-width:1200px) and (max-width:1400px){
+    .prices.grid{
+        column-gap: 20px;
+        row-gap: 20px;
+    }
+    .price-table-container {
+        padding: 48px 120px;
+    }
+}
+@media screen and (min-width:1400px){
+    .prices.grid{
+        column-gap: 126px;
+        row-gap: 20px;
+    }
+    .price-table-container {
+        padding: 48px 160px;
     }
 }
