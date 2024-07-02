@@ -1,0 +1,14 @@
+.price-table, .price-table td{
+    background-color: #F1F4F5;
+    border-radius: 6px;
+}
+
+
+@media screen and (min-width: 1400px) {
+    .price-table{
+        padding-left: 158px;
+        padding-right: 158px;
+        padding-top: 50px;
+        padding-bottom: 70px;
+    }
+}

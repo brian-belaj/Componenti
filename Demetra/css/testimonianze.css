@@ -1,0 +1,11 @@
+.reviews .card{
+    margin-right: 2rem;
+    margin-left: 2rem;
+    padding: 40px;
+    min-height: 400px;
+}
+.reviews .card .card-body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
