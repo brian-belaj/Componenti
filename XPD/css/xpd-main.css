@@ -44,19 +44,19 @@ Text Domain: demetratheme
  */
 
 :root {
-    --black-xpd: #000;
-    --white-xpd: #fff;
-    --xpd-red: #c71f1f;
-    --xpd-grey: #e5e5e5;
+  --black-xpd: #000;
+  --white-xpd: #fff;
+  --xpd-red: #c71f1f;
+  --xpd-grey: #e5e5e5;
 }
-.bg-black-xpd{
-    background-color: var(--black-xpd);
-    color: var(--white-xpd);
+.bg-black-xpd {
+  background-color: var(--black-xpd);
+  color: var(--white-xpd);
 }
 html,
-*{
-    box-sizing: border-box;
-    font-family: "Figtree", sans-serif;
+* {
+  box-sizing: border-box;
+  font-family: "Figtree", sans-serif;
 }
 /**
    * 1.0 Defaults
@@ -66,31 +66,45 @@ html,
    * 2.0 Repeatable Patterns
    * ----------------------------------------------------------------------------
    */
+   /*Video With following button*/
 
-   #video-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
-
-  iframe {
-    width: 100%;
-    height: 100%;
-  }
-
-  #play-button {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    background-color: rgba(255, 0, 0, 0.7);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-  }
+   .frame-container {
+     position: static; /* Permette al cerchio di posizionarsi rispetto a questo contenitore */
+     width: 100%; /* Larghezza del contenitore */
+     height: 315px; /* Altezza del contenitore, può variare in base all'iframe */
+     overflow: hidden; /* Nasconde eventuali contenuti che escono dai bordi */
+     cursor: none; /* Nasconde il cursore */
+   }
+   #iframeContainer iframe{
+     width: 100%;
+     height: 100%;
+   }
+   
+   .circle-out {
+     border-radius: 50%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 70px;
+     width: 70px;
+     background: #fff;
+     position: absolute;
+     padding: 5px;
+     animation: grow .8s infinite;
+   }
+   .circle-out .bi-play-circle-fill{
+     font-size: 35px;
+   }
+   @-webkit-keyframes grow {
+     0%, 100% {
+       border: 2px solid var(--xpd-red);
+       background-color: var(--black-xpd);
+     }
+     50% {
+       border: 8px solid var(--black-xpd);
+       background-color: var(--xpd-red);
+   }
+}
 /**
    * 3.0 Basic Structure
    * ----------------------------------------------------------------------------
