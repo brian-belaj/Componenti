@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script defer src="/js/xpd-main.js"></script>
+    <script defer src="/js/animations_meloria.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>  </head>
   <body>
     <div class="row px-5 py-4 bg-black-xpd">
@@ -32,37 +32,6 @@
         </div>
     </div>
     <script>
-$(document).ready(function() {
-    let isInside = false;
-
-    $('.frame-container').on('mouseenter', function() {
-        isInside = true;
-        $('.circle-out').show(); // Mostra il cerchio quando il mouse entra
-    });
-
-    $('.frame-container').on('mouseleave', function() {
-        isInside = false;
-        $('.circle-out').hide(); // Nasconde il cerchio quando il mouse esce
-    });
-
-    // Gestisci il movimento del mouse per il cerchio
-    $(document).on('mousemove', function(e) {
-        if (isInside) {
-            var xPos = e.pageX - 35; // Sottrae metà della larghezza
-            var yPos = e.pageY - 35; // Sottrae metà dell'altezza
-            $('.circle-out').css({
-                'top': yPos,
-                'left': xPos
-            });
-        }
-    });
-
-    // Mostra l'iframe con effetto fade e nascondi il cerchio al clic
-    $('.frame-container').on('click', function() {
-        $('#iframeContainer').fadeIn(400); // Mostra l'iframe con effetto fade-in
-        $('.circle-out').hide(); // Nasconde il cerchio
-    });
-});
 
     </script>
   </body>
