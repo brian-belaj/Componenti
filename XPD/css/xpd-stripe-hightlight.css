@@ -47,6 +47,7 @@ Text Domain: demetratheme
   --black-xpd: #000;
   --white-xpd: #fff;
   --xpd-red: #c71f1f;
+  --xpd-dark-red: #af1a1a;
   --xpd-grey: #e5e5e5;
 }
 .bg-black-xpd {
@@ -95,7 +96,7 @@ html,
    .circle-out .bi-play-circle-fill{
      font-size: 35px;
    }
-   @-webkit-keyframes grow {
+   @keyframes grow {
      0%, 100% {
        border: 2px solid var(--xpd-red);
        background-color: var(--black-xpd);
@@ -109,6 +110,61 @@ html,
    * 3.0 Basic Structure
    * ----------------------------------------------------------------------------
    */
+   /**
+    3.1 Components
+    **/
+    .btn-primary{
+     background-color: var(--xpd-red);
+     border: none;
+     border-radius: 50px;
+     text-transform: uppercase;
+     font-size: 14px;
+     font-weight: 600;
+     position: relative;
+     padding: .5rem 2.5rem;
+    }
+    .btn-primary:hover{
+     background-color:var(--xpd-dark-red) ;
+    }
+.btn-arrow {
+  position: relative;
+  transition: background-color 300ms ease-out;
+}
+
+.btn-arrow span {
+  display: inline-block;
+  position: relative;
+  transition: all 300ms ease-out;
+  will-change: transform;
+}
+
+.btn-arrow:hover span {
+  transform: translate3d(1rem, 0, 0);
+}
+
+.btn-arrow .bi {
+  position: absolute;
+  width: 1.1em;
+  left:-2rem;
+  opacity: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 300ms ease-out;
+  will-change: left, opacity;
+}
+
+.btn-arrow .bi * {
+  stroke-width: 5;
+  stroke-color: transparent;
+}
+
+.btn-arrow:hover .bi {
+  opacity: 1;
+  left: -rem;
+}
+
+   
+   
 
 /**
    * 4.0 Header

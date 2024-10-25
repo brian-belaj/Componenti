@@ -1,0 +1,62 @@
+.carousel-item{
+    min-height: 500px;
+}
+.carousel-item h2{
+    font-size: 100px;
+    font-weight: 700;
+}
+.carousel-indicators [data-bs-target] {
+    width: 20px;
+    height: 20px;
+    margin-right: 35px;
+    border-radius: 50%;
+    background-color: initial;
+    position: relative;
+}
+
+.carousel-indicators .active {
+    opacity: 1;
+}
+.carousel-indicators i {
+    text-indent: 0px;
+    color: #ffff;
+    position: absolute;
+    font-size: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* Stili base per il cerchio di progresso */
+.progress-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: visible;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.progress-ring__circle {
+    fill: none;
+    stroke: #ffffff;
+    stroke-width: 2;
+    stroke-dasharray: 63; /* Circonferenza del cerchio */
+    stroke-dashoffset: 63; /* Nasconde il cerchio inizialmente */
+    transition: stroke-dashoffset 0.5s ease;
+}
+
+/* Animazione per il bordo circolare */
+@keyframes progress-animation {
+    0% {
+        stroke-dashoffset: 63; /* Nasconde il cerchio */
+    }
+    100% {
+        stroke-dashoffset: 0; /* Mostra completamente il cerchio */
+    }
+}
+
+/* Applica l'animazione quando il pulsante è attivo */
+.carousel-indicators .active .progress-ring__circle {
+    animation: progress-animation 0.5s linear forwards;
+}
