@@ -1,0 +1,54 @@
+.card-img-overlay {
+  background-color: black;
+  opacity: 0.3;
+}
+.card-img-overlay:hover {
+  opacity: 0;
+}
+.productSlider .swiper-button-next:after {
+    font-family: "bootstrap-icons";
+    font-weight: normal;
+    content: "\f138"; /* Codice per l'icona destra */
+    font-size: 1.5rem;
+    color: #000;
+    display: inline-block;
+    position: relative;
+}
+
+/* Cerchio di caricamento intorno all'icona */
+.productSlider .swiper-button-next:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid grey; 
+  opacity: 0; /* Inizialmente invisibile */
+  transition: opacity 0.3s ease, border-color 0.3s ease; /* Aggiunto transition per una transizione più fluida */
+}
+
+
+.productSlider .swiper-button-next:hover:before {
+  opacity: 1; /* Rendi visibile al passaggio del mouse */
+  border-color: red; /* Cambia il colore del bordo in rosso */
+}
+
+@keyframes circle-load {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+ 
+    }
+}
+
+
+.productSlider .swiper-button-next,
+.productSlider .swiper-button-prev {
+  top: 5% !important;
+}
