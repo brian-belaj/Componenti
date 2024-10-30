@@ -1,0 +1,107 @@
+.custom-tooltip {
+  --bs-tooltip-bg: var(--bs-white);
+  --bs-tooltip-color: var(--bs-black);
+}
+
+.product-tooltip-row {
+  background-image: url(/img/aphalt_xpd_2023.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+}
+
+.product-tooltip-row img {
+  max-width: 600px;
+}
+
+.product-tooltip-row button {
+  position: absolute;
+  width: 35px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  padding: 1px;
+  background-color: #c71f1f;
+  border-color: #c71f1f;
+}
+
+.product-tooltip-row button:hover {
+  background-color: #af1a1a;
+  border-color: #af1a1a;
+}
+
+.product-tooltip-row button .bi-plus {
+  font-size: 20px;
+  transition: transform 0.3s linear;
+}
+
+.product-tooltip-row button .bi-plus:hover {
+  animation: spin 0.3s linear forwards;
+}
+
+.product-tooltip-row button .bi-plus:hover:active {
+  animation: spin-reverse 0.3s linear forwards;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes spin-reverse {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@media (max-width: 575.98px) {
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}
+
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  #chiusura {
+    top: 26%;
+    left: 35%;
+  }
+  #materiale-esterno {
+    left: 39%;
+    top: 70%;
+  }
+  #shock-absorber{
+    top: 27%;
+    left: 53%;
+  }
+  #slider-mag{
+    left: 66%;
+    top: 84%;
+  }
+}
+
+@media (min-width: 1400px) {
+  #chiusura {
+    top: 26%;
+    left: 38%;
+  }
+  #materiale-esterno {
+    left: 39%;
+    top: 70%;
+  }
+  #shock-absorber{
+    top: 27%;
+    left: 53%;
+  }
+  #slider-mag{
+    left: 66%;
+    top: 84%;
+  }
+}
